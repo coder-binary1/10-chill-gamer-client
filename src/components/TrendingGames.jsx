@@ -15,7 +15,7 @@ const TrendingGames = () => {
         Trending Games
       </h2>
       <div className="border-2 w-10 m-auto border-red-500 my-2"></div>
-      <div className="flex flex-wrap justify-center gap-6 mt-4">
+      <div className="flex flex-wrap justify-center gap-6 mt-4 mx-5">
         {games?.map((game, idx) => (
           <TrendingGameCard key={idx} game={game}></TrendingGameCard>
         ))}

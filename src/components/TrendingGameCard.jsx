@@ -12,13 +12,11 @@ const TrendingGameCard = ({ game }) => {
       </figure>
       <div className="card-body text-left">
         <p className="grow-0 font-medium font-poppins uppercase badge badge-soft badge-error badge-sm">
-          {origin}
+          {genres}
         </p>
         <h2 className="card-title font-titillium text-xl">{title}</h2>
         <p className="font-poppins font-light grow-0">{description}</p>
-        <p className="font-poppins font-light grow-0">
-          <span className="font-medium ">Genres:</span> {genres}
-        </p>
+
         <p className="font-poppins font-light">
           <span className="font-medium">Published:</span> {published_year}
         </p>

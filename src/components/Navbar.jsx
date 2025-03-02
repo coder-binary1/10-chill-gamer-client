@@ -9,6 +9,9 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
+        <NavLink to="/">Explore Games</NavLink>
+      </li>
+      <li>
         <NavLink to="/">All Reviews</NavLink>
       </li>
       <li>
@@ -18,10 +21,7 @@ const Navbar = () => {
         <NavLink to="/">My Reviews</NavLink>
       </li>
       <li>
-        <NavLink to="/">Game WatchList</NavLink>
-      </li>
-      <li>
-        <NavLink to="/">Login/Register</NavLink>
+        <NavLink to="/">WatchList</NavLink>
       </li>
     </>
   );

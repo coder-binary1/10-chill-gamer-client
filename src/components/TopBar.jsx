@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const TopBar = () => {
   return (
     <div className="mt-5 mr-6 hidden lg:flex items-center gap-6 float-right">
-      <div className="text-red-500 flex gap-2">
+      <div className="text-red-500 flex gap-4">
         <Link>
           <FaFacebookF />
         </Link>
