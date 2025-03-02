@@ -1,0 +1,182 @@
+[
+  {
+    "cover_image": "https://i.ibb.co.com/xSnP0rKy/Guild-Wars-2-Cropped.jpg",
+    "title": "Guild Wars 2",
+    "description": "An MMORPG set in a detailed fantasy world, offering dynamic events and large-scale PvP combat.",
+    "rating": 9,
+    "published_year": 2012,
+    "genres": ["MMO", "RPG", "Fantasy"],
+    "origin": "arenanet"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/YFKHZS4p/World-of-Warcraft-Cropped.jpg",
+    "title": "World of Warcraft",
+    "description": "The classic MMORPG where players embark on epic quests, form guilds, and engage in large-scale raids.",
+    "rating": 9,
+    "published_year": 2004,
+    "genres": ["MMO", "RPG", "Fantasy"],
+    "origin": "blizzard"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/r2v9p2pz/Escape-from-Tarkov-Cropped.jpg",
+    "title": "Escape from Tarkov",
+    "description": "A hardcore and realistic online first-person action RPG with MMO features and a storyline. Fight to survive in a Russian city.",
+    "rating": 8,
+    "published_year": 2017,
+    "genres": ["FPS", "RPG", "Survival"],
+    "origin": "bsg"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/F4dgM2Bq/City-of-Heroes-Cropped.jpg",
+    "title": "City of Heroes",
+    "description": "An online superhero game where players can create their own heroes and battle villains in an open-world city.",
+    "rating": 7,
+    "published_year": 2004,
+    "genres": ["MMO", "Superhero", "Action"],
+    "origin": "cityofheroes"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/jkHqsy10/planetside-2-Cropped.jpg",
+    "title": "PlanetSide 2",
+    "description": "A large-scale multiplayer online FPS where players fight in massive battles across different planets.",
+    "rating": 8,
+    "published_year": 2012,
+    "genres": ["FPS", "Action", "Sci-fi"],
+    "origin": "daybreak"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/9CHZJrm/Fortnite-Cropped.jpg",
+    "title": "Fortnite",
+    "description": "A battle royale game that mixes survival and construction elements in a fast-paced, fun environment.",
+    "rating": 9,
+    "published_year": 2017,
+    "genres": ["Battle Royale", "Action", "Shooter"],
+    "origin": "epicgames"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/nMQN2dnL/Elite-Dangerous-Cropped.jpg",
+    "title": "Elite Dangerous",
+    "description": "A space simulation game set in a realistic recreation of the Milky Way, offering exploration, trading, and combat.",
+    "rating": 8,
+    "published_year": 2014,
+    "genres": ["Simulation", "Sci-fi", "Space"],
+    "origin": "frontier"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/G4kvnjnv/Neverwinter-Cropped.jpg",
+    "title": "Neverwinter",
+    "description": "A free-to-play MMORPG set in the Dungeons & Dragons universe, offering dungeon crawling and large-scale battles.",
+    "rating": 7,
+    "published_year": 2013,
+    "genres": ["MMO", "RPG", "Action"],
+    "origin": "neverwinter"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/5xjM34zk/Skyrim-Cropped.jpg",
+    "title": "Skyrim: Special Edition",
+    "description": "An open-world RPG set in a fantasy world where you explore dungeons, slay dragons, and embark on epic quests.",
+    "rating": 9,
+    "published_year": 2016,
+    "genres": ["RPG", "Adventure", "Fantasy"],
+    "origin": "nexusmods"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/9kpCBRPS/Super-Mario-Odyssey-Cropped.jpg",
+    "title": "Super Mario Odyssey",
+    "description": "A 3D platformer where Mario travels through various kingdoms to rescue Princess Peach from Bowser.",
+    "rating": 9,
+    "published_year": 2017,
+    "genres": ["Platformer", "Adventure"],
+    "origin": "nintendo"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/B2Wp5xy4/sims-4-Cropped.jpg",
+    "title": "The Sims 4",
+    "description": "A life simulation game where players can create and control virtual people, build houses, and live out various life scenarios.",
+    "rating": 8,
+    "published_year": 2014,
+    "genres": ["Simulation", "Life Simulation"],
+    "origin": "Electronic Arts"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/1jkdNKD/Renegade-X-Cropped.jpg",
+    "title": "RenegadeX",
+    "description": "A fan-made, free-to-play FPS based on Command & Conquer: Renegade, featuring intense multiplayer battles.",
+    "rating": 7,
+    "published_year": 2014,
+    "genres": ["FPS", "Action", "Multiplayer"],
+    "origin": "renegadex"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/pvt7HFQn/League-of-Legends-Cropped.jpg",
+    "title": "League of Legends",
+    "description": "A competitive MOBA where players work in teams to destroy the enemy's Nexus while defending their own.",
+    "rating": 9,
+    "published_year": 2009,
+    "genres": ["MOBA", "Action", "Multiplayer"],
+    "origin": "riot"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/kgDBW87Q/gta-5-Cropped.jpg",
+    "title": "Grand Theft Auto V",
+    "description": "An open-world action-adventure game where players can explore the city, commit crimes, and participate in story-driven missions.",
+    "rating": 10,
+    "published_year": 2013,
+    "genres": ["Action", "Open-world", "Adventure"],
+    "origin": "rockstar"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/kZxvHkg/Uncharted-4-A-Thiefs-End-Cropped.jpg",
+    "title": "Uncharted 4: A Thief's End",
+    "description": "An action-adventure game where players explore ancient ruins and solve puzzles while navigating intense gunfights.",
+    "rating": 9,
+    "published_year": 2016,
+    "genres": ["Action", "Adventure", "Shooter"],
+    "origin": "sony"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/kVJ5Zn35/half-life-alyx-Cropped.jpg",
+    "title": "Half-Life: Alyx",
+    "description": "A virtual reality first-person shooter that immerses players in the Half-Life universe, offering puzzles and combat.",
+    "rating": 9,
+    "published_year": 2020,
+    "genres": ["VR", "FPS", "Action"],
+    "origin": "steam"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/LXVcYZc6/the-elder-scrolls-online-Cropped.jpg",
+    "title": "The Elder Scrolls Online",
+    "description": "An MMORPG set in the Elder Scrolls universe, offering players the chance to explore Tamriel and engage in various quests.",
+    "rating": 8,
+    "published_year": 2014,
+    "genres": ["MMO", "RPG", "Fantasy"],
+    "origin": "teso"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/0RNrNFtx/assassins-creed-valhalla-Cropped.jpg",
+    "title": "Assassin's Creed Valhalla",
+    "description": "An open-world action RPG set in the Viking Age, where players raid and conquer lands while exploring the world.",
+    "rating": 8,
+    "published_year": 2020,
+    "genres": ["Action", "RPG", "Adventure"],
+    "origin": "uplay"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/LyY8JmQ/warfrme-Cropped.jpg",
+    "title": "Warframe",
+    "description": "A free-to-play third-person shooter set in a futuristic universe, where players control powerful Warframes to battle enemies.",
+    "rating": 9,
+    "published_year": 2013,
+    "genres": ["Action", "Shooter", "Sci-fi"],
+    "origin": "warframe"
+  },
+  {
+    "cover_image": "https://i.ibb.co.com/whTGcPH7/world-o-tanks-Cropped.jpg",
+    "title": "World of Tanks",
+    "description": "A vehicular combat MMO where players control armored tanks and engage in team-based battles on various maps.",
+    "rating": 8,
+    "published_year": 2010,
+    "genres": ["Action", "Shooter", "Multiplayer"],
+    "origin": "wargaming"
+  }
+]
