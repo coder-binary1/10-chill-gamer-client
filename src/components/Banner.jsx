@@ -83,7 +83,7 @@ const Banner = () => {
           >
             <div className="flex h-120 lg:h-[calc(100vh-120px)]  flex-col justify-center items-center text-center text-white">
               <div className="absolute w-full h-full bg-black opacity-30"></div>
-              <div className="flex gap-6 z-10 font-medium">
+              <div className="hidden md:flex gap-6 z-10 font-medium">
                 <p className="flex items-center gap-2">
                   <PiMonitorBold className="text-red-500 text-lg" />
                   {slide.platforms}

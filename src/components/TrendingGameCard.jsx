@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 
 const TrendingGameCard = ({ game }) => {
-  console.log(game);
   const { title, description, cover_image, genres, published_year, origin } =
     game;
 
@@ -22,8 +21,8 @@ const TrendingGameCard = ({ game }) => {
         </p>
         <div className="card-actions justify-end">
           <button className="relative btn btn-sm bg-transparent text-red-500 hover:text-white transition-all duration-100 border-0 rounded-xs overflow-hidden group">
-            <span class="absolute inset-0 w-full h-full bg-red-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom"></span>
-            <span class="relative z-10 transition-opacity duration-300">
+            <span className="absolute inset-0 w-full h-full bg-red-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom"></span>
+            <span className="relative z-10 transition-opacity duration-300">
               Explore Details
             </span>
           </button>

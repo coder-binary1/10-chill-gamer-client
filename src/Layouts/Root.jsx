@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import BLogAndNews from "../components/BLogAndNews";
+import BlogAndNews from "../components/BlogAndNews";
 import Footer from "../components/Footer";
 import Navbar from "../components/NavBar";
 import TrendingGames from "../components/TrendingGames";
@@ -15,7 +15,7 @@ const Root = () => {
       <main>
         <TrendingGames></TrendingGames>
         <TrustedPartners></TrustedPartners>
-        <BLogAndNews></BLogAndNews>
+        <BlogAndNews></BlogAndNews>
       </main>
       <footer>
         <Footer></Footer>
