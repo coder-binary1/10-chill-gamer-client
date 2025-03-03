@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const TrendingGameCard = ({ game }) => {
+const GameCard = ({ game }) => {
   const { title, description, cover_image, genres, published_year } = game;
 
   return (
@@ -42,7 +42,7 @@ const TrendingGameCard = ({ game }) => {
   );
 };
 
-TrendingGameCard.propTypes = {
+GameCard.propTypes = {
   game: PropTypes.object.isRequired,
 };
-export default TrendingGameCard;
+export default GameCard;

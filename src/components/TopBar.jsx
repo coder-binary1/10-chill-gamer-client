@@ -1,8 +1,12 @@
-import { FaFacebookF, FaTwitter, FaTwitch, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaTwitch } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import ThemeSwitcher from "./ThemeSwitcher";
 const TopBar = () => {
   return (
     <div className="mt-5 mr-6 hidden lg:flex items-center gap-6 float-right">
+      <div>
+        <ThemeSwitcher></ThemeSwitcher>
+      </div>
       <div className="text-red-500 flex gap-4">
         <Link>
           <FaFacebookF />

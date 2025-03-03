@@ -100,7 +100,7 @@ const Banner = () => {
                 {slide.gameDescription}
               </p>
               <Link
-                to="https://www.youtube.com/"
+                to="/games"
                 className="btn btn-lg bg-red-500 border-0 text-white font-poppins mt-8 z-10"
               >
                 Explore All

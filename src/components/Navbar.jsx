@@ -1,34 +1,121 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import TopBar from "./TopBar";
-import { SiV } from "react-icons/si";
+import { useContext } from "react";
+import { ThemeContext } from "../Providers/ThemeProvider";
 
 const Navbar = () => {
+  const { theme } = useContext(ThemeContext);
+  const location = useLocation().pathname;
+
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? "text-red-500"
+              : location === "/" || theme === "dark"
+              ? "text-white"
+              : "text-black"
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/">Explore Games</NavLink>
+        <NavLink
+          to="/games"
+          className={({ isActive }) =>
+            isActive
+              ? "text-red-500"
+              : location === "/"
+              ? "text-white"
+              : theme === "dark"
+              ? "text-white"
+              : "text-black"
+          }
+        >
+          Explore Games
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/">All Reviews</NavLink>
+        <NavLink
+          to="/reviews"
+          className={({ isActive }) =>
+            isActive
+              ? "text-red-500"
+              : location === "/"
+              ? "text-white"
+              : theme === "dark"
+              ? "text-white"
+              : "text-black"
+          }
+        >
+          All Reviews
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/">Add Review</NavLink>
+        <NavLink
+          to="/addReview"
+          className={({ isActive }) =>
+            isActive
+              ? "text-red-500"
+              : location === "/"
+              ? "text-white"
+              : theme === "dark"
+              ? "text-white"
+              : "text-black"
+          }
+        >
+          Add Review
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/">My Reviews</NavLink>
+        <NavLink
+          to="/myReview"
+          className={({ isActive }) =>
+            isActive
+              ? "text-red-500"
+              : location === "/"
+              ? "text-white"
+              : theme === "dark"
+              ? "text-white"
+              : "text-black"
+          }
+        >
+          My Reviews
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/">WatchList</NavLink>
+        <NavLink
+          to="/wishlist"
+          className={({ isActive }) =>
+            isActive
+              ? "text-red-500"
+              : location === "/"
+              ? "text-white"
+              : theme === "dark"
+              ? "text-white"
+              : "text-black"
+          }
+        >
+          Wishlist
+        </NavLink>
       </li>
     </>
   );
+
   return (
-    <div className="container mx-auto absolute left-0 right-0 z-10">
+    <div
+      className={
+        location !== "/"
+          ? `container mx-auto left-0 right-0 z-10`
+          : `container mx-auto absolute left-0 right-0 z-10`
+      }
+    >
       <TopBar></TopBar>
-      <div className="navbar text-white">
+      <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -59,11 +146,12 @@ const Navbar = () => {
             to={"/"}
             className="btn btn-ghost text-3xl font-titillium font-extrabold"
           >
-            Chill <span className="text-red-500">Gamer</span>
+            <span className={location !== "/" ? "" : "text-white"}>Chill</span>{" "}
+            <span className="text-red-500">Gamer</span>
           </Link>
         </div>
         <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 font-poppins font-medium">
+          <ul className="menu menu-horizontal px-1 font-poppins font-medium ">
             {links}
           </ul>
         </div>

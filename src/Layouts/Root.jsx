@@ -1,23 +1,18 @@
-import Banner from "../components/Banner";
-import BlogAndNews from "../components/BlogAndNews";
+import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/NavBar";
-import Reviews from "../components/Reviews";
-import TrendingGames from "../components/TrendingGames";
-import TrustedPartners from "../components/TrustedPartners";
+import ThemeProvider from "../Providers/ThemeProvider";
 
 const Root = () => {
   return (
-    <div>
+    <div className="flex flex-col h-screen">
       <header>
-        <Navbar></Navbar>
-        <Banner></Banner>
+        <ThemeProvider>
+          <Navbar></Navbar>
+        </ThemeProvider>
       </header>
-      <main>
-        <TrendingGames></TrendingGames>
-        <TrustedPartners></TrustedPartners>
-        <Reviews></Reviews>
-        <BlogAndNews></BlogAndNews>
+      <main className="grow">
+        <Outlet></Outlet>
       </main>
       <footer>
         <Footer></Footer>
