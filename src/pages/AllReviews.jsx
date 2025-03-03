@@ -5,7 +5,7 @@ const AllReviews = () => {
   const reviews = useLoaderData();
 
   return (
-    <div className="container mx-auto flex flex-wrap justify-center gap-6 my-12">
+    <div className="md:mx-auto flex flex-wrap justify-center gap-6 my-12 mx-5">
       {reviews.map((review, idx) => (
         <ReviewCard key={idx} review={review}></ReviewCard>
       ))}

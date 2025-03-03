@@ -5,7 +5,7 @@ const ExploreGames = () => {
   const games = useLoaderData();
 
   return (
-    <div className="flex flex-wrap gap-6 justify-center py-12">
+    <div className="flex flex-wrap gap-6 justify-center py-12 mx-5">
       {games.map((game, idx) => (
         <GameCard key={idx} game={game}></GameCard>
       ))}

@@ -2,8 +2,10 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import TopBar from "./TopBar";
 import { useContext } from "react";
 import { ThemeContext } from "../Providers/ThemeProvider";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   const { theme } = useContext(ThemeContext);
   const location = useLocation().pathname;
 
@@ -55,6 +57,7 @@ const Navbar = () => {
           All Reviews
         </NavLink>
       </li>
+
       <li>
         <NavLink
           to="/addReview"
@@ -71,6 +74,7 @@ const Navbar = () => {
           Add Review
         </NavLink>
       </li>
+
       <li>
         <NavLink
           to="/myReview"
