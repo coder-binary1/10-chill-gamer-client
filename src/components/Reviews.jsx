@@ -15,7 +15,7 @@ const Reviews = () => {
       <h2 className="text-4xl font-titillium font-bold text-gray-700">
         Reviews
       </h2>
-      <div className="border-2 w-10 m-auto border-red-500 my-2"></div>
+      <div className="border-2 w-10 m-auto border-red-500 mt-2 mb-6"></div>
       <div className="flex flex-wrap justify-center gap-6 mx-5 text-left">
         {reviews?.map((review, idx) => {
           return (

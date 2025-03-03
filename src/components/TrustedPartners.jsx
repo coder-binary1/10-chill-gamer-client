@@ -14,7 +14,7 @@ const TrustedPartners = () => {
       <h2 className="text-4xl font-titillium font-bold text-gray-700">
         Trusted Partners
       </h2>
-      <div className="border-2 w-10 m-auto border-red-500 my-2"></div>
+      <div className="border-2 w-10 m-auto border-red-500 mt-2 mb-6"></div>
       <div className="bg-gray-600 py-12">
         <Marquee pauseOnHover gradient gradientWidth>
           {logos?.map((logo, idx) => (
