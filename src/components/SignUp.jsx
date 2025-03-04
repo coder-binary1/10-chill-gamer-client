@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import SingInWithGoogle from "./SingInWithGoogle";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
   const { signUpWithEmail, updateUser } = useContext(AuthContext);
@@ -19,6 +20,13 @@ const SignUp = () => {
       .then(() => {
         updateUser(name, photo).then(() => {
           form.reset();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Sign up successful",
+            showConfirmButton: false,
+            timer: 1500,
+          });
           navigate("/");
         });
       })

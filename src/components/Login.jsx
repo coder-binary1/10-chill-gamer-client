@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import SingInWithGoogle from "./SingInWithGoogle";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { signInWithEmail } = useContext(AuthContext);
@@ -16,7 +17,14 @@ const Login = () => {
     signInWithEmail(email, password)
       .then(() => {
         form.reset();
-        navigate("/myReview");
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Sign in successful",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        navigate("/");
       })
       .catch((err) => alert(err.code));
   };

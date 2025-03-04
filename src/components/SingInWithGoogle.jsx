@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const SingInWithGoogle = () => {
   const { setUser, googleSignIn } = useContext(AuthContext);
@@ -9,6 +10,13 @@ const SingInWithGoogle = () => {
   const handleGoogleSignIn = () => {
     googleSignIn().then((res) => {
       setUser(res.user);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Sign in successful",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       navigate("/");
     });
   };
