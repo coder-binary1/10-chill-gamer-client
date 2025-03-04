@@ -1,12 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
 import SingInWithGoogle from "./SingInWithGoogle";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import {
+  emailValidation,
+  passwordValidation,
+} from "../utilities/credentialsValidation";
 
 const Login = () => {
   const { signInWithEmail } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  const [error, setError] = useState();
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -14,20 +20,30 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    signInWithEmail(email, password)
-      .then(() => {
-        form.reset();
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Sign in successful",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        navigate("/");
-      })
-      .catch((err) => alert(err.code));
+    setError("");
+    const emailCheck = emailValidation(email);
+    const passCheck = passwordValidation(password);
+
+    emailCheck.isValid &&
+      passCheck.isValid &&
+      signInWithEmail(email, password)
+        .then(() => {
+          form.reset();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Sign in successful",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          navigate("/");
+        })
+        .catch((err) => setError(err.code));
+    emailCheck.isValid || setError(emailCheck.message);
+    passCheck.isValid ||
+      setError([...emailCheck.message, ...passCheck.message]);
   };
+
   return (
     <div
       className="flex justify-center items-center font-poppins my-10"
@@ -57,6 +73,15 @@ const Login = () => {
               placeholder="Password"
               name="password"
             />
+            {error && (
+              <div role="alert" className="alert alert-error alert-soft">
+                <ul>
+                  {error.map((err) => (
+                    <li className="list-disc ml-4">{err}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <button className="btn btn-lg btn-neutral mt-4 border-0 text-white hover:bg-red-500">
               Sign In

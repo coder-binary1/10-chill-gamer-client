@@ -1,12 +1,19 @@
 import { Link, useNavigate } from "react-router-dom";
 import SingInWithGoogle from "./SingInWithGoogle";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import {
+  emailValidation,
+  nameValidation,
+  passwordValidation,
+} from "../utilities/credentialsValidation";
 
 const SignUp = () => {
   const { signUpWithEmail, updateUser } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  const [error, setError] = useState();
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -16,24 +23,42 @@ const SignUp = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    signUpWithEmail(email, password)
-      .then(() => {
-        updateUser(name, photo).then(() => {
-          form.reset();
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Sign up successful",
-            showConfirmButton: false,
-            timer: 1500,
+    setError("");
+    const nameCheck = nameValidation(name);
+    const emailCheck = emailValidation(email);
+    const passCheck = passwordValidation(password);
+
+    nameCheck.isValid &&
+      emailCheck.isValid &&
+      passCheck.isValid &&
+      signUpWithEmail(email, password)
+        .then(() => {
+          updateUser(name, photo).then(() => {
+            form.reset();
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Sign up successful",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            navigate("/");
           });
-          navigate("/");
+        })
+        .catch((err) => {
+          setError(err.code);
         });
-      })
-      .catch((err) => {
-        alert(err.code);
-      });
+    nameCheck.isValid || setError(nameCheck.message);
+    emailCheck.isValid ||
+      setError([...nameCheck.message, ...emailCheck.message]);
+    passCheck.isValid ||
+      setError([
+        ...nameCheck.message,
+        ...emailCheck.message,
+        ...passCheck.message,
+      ]);
   };
+
   return (
     <div
       className="flex justify-center items-center font-poppins my-10"
@@ -81,7 +106,15 @@ const SignUp = () => {
               placeholder="Password"
               name="password"
             />
-
+            {error && (
+              <div role="alert" className="alert alert-error alert-soft">
+                <ul>
+                  {error.map((err) => (
+                    <li className="list-disc ml-4">{err}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <button className="btn btn-lg btn-neutral mt-4 border-0 text-white hover:bg-red-500">
               Sign Up
             </button>
