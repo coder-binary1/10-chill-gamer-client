@@ -4,7 +4,7 @@ import ReviewCard from "./ReviewCard";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/reviews?limit=3")
+    fetch("http://localhost:5000/review?limit=3")
       .then((res) => res.json())
       .then((userData) => setReviews(userData));
   }, []);

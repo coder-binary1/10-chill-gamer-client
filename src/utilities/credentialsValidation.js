@@ -17,7 +17,10 @@ function passwordValidation(password) {
 
 function nameValidation(name) {
   if (name.length < 3) {
-    return { isValid: false, message: ["enter a valid name"] };
+    return {
+      isValid: false,
+      message: ["name must be more than 3 character long"],
+    };
   }
   return { isValid: true, message: [] };
 }

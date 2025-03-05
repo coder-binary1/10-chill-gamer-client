@@ -1,18 +1,17 @@
 import ReactStars from "react-rating-stars-component";
 import { useLoaderData } from "react-router-dom";
-import ReviewCard from "../components/ReviewCard";
 import ReviewCardForDetails from "../components/ReviewCardForDetails";
 
 const GameDetails = () => {
   const {
     title,
     thumbnail,
-    description,
     rating,
     published_year,
-    origin,
-    genres,
-    reviews,
+    genre,
+    review,
+    name,
+    email,
   } = useLoaderData();
 
   return (
@@ -23,26 +22,22 @@ const GameDetails = () => {
         </figure>
         <div className="card-body md:w-1/2 space-y-2">
           <div className="space-x-2">
-            {genres.map((genre, idx) => (
-              <p key={idx} className="badge badge-soft badge-error">
-                {genre}
-              </p>
-            ))}
+            <p className="badge badge-soft badge-error">{genre}</p>
           </div>
           <h2 className="card-title text-3xl">{title}</h2>
-          <p className="grow-0">{description}</p>
+          {/* <p className="grow-0">{description}</p> */}
           <p className="grow-0">
             <span className="font-medium">Published: </span>
             {published_year}
           </p>
-          <p className="grow-0 capitalize">
+          {/* <p className="grow-0 capitalize">
             <span className="font-medium">Origin: </span>
             {origin}
-          </p>
+          </p> */}
           <div className="grow">
             <ReactStars
               count={5}
-              value={rating / 2}
+              value={rating}
               isHalf={true}
               char={"★"}
               size={28}
@@ -56,12 +51,11 @@ const GameDetails = () => {
       <div>
         <h2 className="text-2xl mt-10">Reviews</h2>
         <div className="space-y-4 mt-3">
-          {reviews.map((review, idx) => (
-            <ReviewCardForDetails
-              key={idx}
-              review={review}
-            ></ReviewCardForDetails>
-          ))}
+          <ReviewCardForDetails
+            review={review}
+            name={name}
+            email={email}
+          ></ReviewCardForDetails>
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ const Profile = () => {
       <div className="mt-4 space-y-1 text-center">
         <h2 className="text-2xl font-bold">{user.displayName}</h2>
         <p>Joining Date: {joinDate}</p>
-        <p>Last Login Time: {lastLogin}</p>
+        <p>Last Login: {lastLogin}</p>
         <p></p>
       </div>
     </div>

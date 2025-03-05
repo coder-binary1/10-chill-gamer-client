@@ -1,0 +1,142 @@
+[
+  {
+    "_id": "67c82839a2f0a45982b5c2df",
+    "game_title": "Guild Wars 2",
+    "reviews": [
+      {
+        "name": "John Doe",
+        "image": "https://i.ibb.co/j0tnzjM/john-doe.jpg",
+        "profession": "Game Developer",
+        "review": "Guild Wars 2 offers such a refreshing take on the MMORPG genre with dynamic events and an engaging world. Highly recommend for MMO fans.",
+        "rating": 9
+      },
+      {
+        "name": "Jane Smith",
+        "image": "https://i.ibb.co/tzqNkVt/jane-smith.jpg",
+        "profession": "Graphic Designer",
+        "review": "A great game with a lot of depth. The combat system and world-building are top-notch. But it can be overwhelming at first.",
+        "rating": 8
+      }
+    ]
+  },
+  {
+    "_id": "67c82839a2f0a45982b5c2e0",
+    "game_title": "World of Warcraft",
+    "reviews": [
+      {
+        "name": "Mark Miller",
+        "image": "https://i.ibb.co/kxrVj8P/mark-miller.jpg",
+        "profession": "Software Engineer",
+        "review": "World of Warcraft is the classic MMORPG experience. It's been a staple for years and continues to deliver epic adventures.",
+        "rating": 9
+      },
+      {
+        "name": "Emily Davis",
+        "image": "https://i.ibb.co/j7K6XyN/emily-davis.jpg",
+        "profession": "Content Writer",
+        "review": "The game has aged well, but the grind can feel a little repetitive. Still, the community is fantastic.",
+        "rating": 7
+      }
+    ]
+  },
+  {
+    "_id": "67c82839a2f0a45982b5c2e1",
+    "game_title": "Escape from Tarkov",
+    "reviews": [
+      {
+        "name": "Carlos Garcia",
+        "image": "https://i.ibb.co/fM3qkHp/carlos-garcia.jpg",
+        "profession": "Military Analyst",
+        "review": "Escape from Tarkov is incredibly intense and rewarding. The learning curve is steep, but if you love realistic shooters, it's worth it.",
+        "rating": 8
+      },
+      {
+        "name": "Rachel Lee",
+        "image": "https://i.ibb.co/qFSt88g/rachel-lee.jpg",
+        "profession": "Game Tester",
+        "review": "It's a great survival game, but the bugs and crashes are frustrating. Still, the adrenaline rush in firefights is unmatched.",
+        "rating": 7
+      }
+    ]
+  },
+  {
+    "_id": "67c82839a2f0a45982b5c2e2",
+    "game_title": "City of Heroes",
+    "reviews": [
+      {
+        "name": "Andrew Johnson",
+        "image": "https://i.ibb.co/ydfnXyN/andrew-johnson.jpg",
+        "profession": "Creative Director",
+        "review": "Such a unique and fun experience for superhero fans. I loved designing my own hero and battling villains.",
+        "rating": 8
+      },
+      {
+        "name": "Linda Walker",
+        "image": "https://i.ibb.co/bmv5gk8/linda-walker.jpg",
+        "profession": "UX Designer",
+        "review": "A fun game for its time, but it hasn't aged well. Still, the superhero aspect was fun to play around with.",
+        "rating": 6
+      }
+    ]
+  },
+  {
+    "_id": "67c82839a2f0a45982b5c2e3",
+    "game_title": "PlanetSide 2",
+    "reviews": [
+      {
+        "name": "Sam Harris",
+        "image": "https://i.ibb.co/CbcZykn/sam-harris.jpg",
+        "profession": "FPS Enthusiast",
+        "review": "PlanetSide 2 is epic in scale. Large-scale battles with hundreds of players are thrilling, but the game can feel chaotic.",
+        "rating": 8
+      },
+      {
+        "name": "Chloe Adams",
+        "image": "https://i.ibb.co/M1Q3P1M/chloe-adams.jpg",
+        "profession": "Game Designer",
+        "review": "The battles are massive, but the gameplay can be clunky and hard to get into. It's a fun experience for FPS fans.",
+        "rating": 7
+      }
+    ]
+  },
+  {
+    "_id": "67c82839a2f0a45982b5c2e4",
+    "game_title": "Fortnite",
+    "reviews": [
+      {
+        "name": "Tom Carter",
+        "image": "https://i.ibb.co/kyYcxKm/tom-carter.jpg",
+        "profession": "Social Media Manager",
+        "review": "Fortnite is fun and addicting, with a unique blend of building and shooting. It's become a global phenomenon for a reason.",
+        "rating": 9
+      },
+      {
+        "name": "Sophie Green",
+        "image": "https://i.ibb.co/7n6r7sX/sophie-green.jpg",
+        "profession": "Streamer",
+        "review": "It's fun, but the community can be a bit toxic. Still, the battle royale mode is entertaining and full of surprises.",
+        "rating": 8
+      }
+    ]
+  },
+  {
+    "_id": "67c82839a2f0a45982b5c2e5",
+    "game_title": "Elite Dangerous",
+    "reviews": [
+      {
+        "name": "Ben Thomas",
+        "image": "https://i.ibb.co/nfV5k8F/ben-thomas.jpg",
+        "profession": "Astronomer",
+        "review": "The depth and realism in Elite Dangerous are incredible. The universe is massive, and the freedom to do what you want is unmatched.",
+        "rating": 8
+      },
+      {
+        "name": "Olivia Scott",
+        "image": "https://i.ibb.co/2tZ7gXq/olivia-scott.jpg",
+        "profession": "Engineer",
+        "review": "Great space exploration simulator, but the learning curve is steep. It’s a game that requires patience and time.",
+        "rating": 7
+      }
+    ]
+  }
+]

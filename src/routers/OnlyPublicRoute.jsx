@@ -14,7 +14,7 @@ const OnlyPublicRoute = ({ children }) => {
     return children;
   }
 
-  return <Navigate to={"/myReview"}></Navigate>;
+  return <Navigate to={"/"}></Navigate>;
 };
 
 export default OnlyPublicRoute;

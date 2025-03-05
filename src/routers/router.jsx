@@ -22,16 +22,17 @@ const router = createBrowserRouter([
         element: <ExploreGames></ExploreGames>,
         loader: () => fetch("http://localhost:5000/games"),
       },
-      {
-        path: "/games/:id",
-        element: <GameDetails></GameDetails>,
-        loader: ({ params }) =>
-          fetch(`http://localhost:5000/games/${params.id}`),
-      },
+
       {
         path: "/reviews",
         element: <AllReviews></AllReviews>,
-        loader: () => fetch("http://localhost:5000/reviews"),
+        loader: () => fetch("http://localhost:5000/review"),
+      },
+      {
+        path: "/review/:id",
+        element: <GameDetails></GameDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/review/${params.id}`),
       },
       {
         path: "/addReview",
@@ -43,11 +44,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/myReview",
-        element: <PrivateRoute></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <h2>My Review</h2>
+          </PrivateRoute>
+        ),
       },
       {
-        path: "/wishlist",
-        element: <PrivateRoute></PrivateRoute>,
+        path: "/watchlist",
+        element: (
+          <PrivateRoute>
+            <h2>Watch List</h2>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/profile",

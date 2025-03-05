@@ -37,6 +37,7 @@ const SignUp = () => {
             const userData = {
               name: res.user.displayName,
               email: res.user.email,
+              photoUrl: res.user.photoURL,
               createdAt: res.user.metadata.createdAt,
               lastLoginAt: res.user.metadata.lastLoginAt,
             };

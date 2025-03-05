@@ -25,7 +25,7 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink
           to="/games"
           className={({ isActive }) =>
@@ -40,7 +40,7 @@ const Navbar = () => {
         >
           Explore Games
         </NavLink>
-      </li>
+      </li> */}
       <li>
         <NavLink
           to="/reviews"
@@ -93,7 +93,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/wishlist"
+          to="/watchlist"
           className={({ isActive }) =>
             isActive
               ? "text-red-500"
@@ -104,7 +104,7 @@ const Navbar = () => {
               : "text-black"
           }
         >
-          Wishlist
+          Watchlist
         </NavLink>
       </li>
     </>

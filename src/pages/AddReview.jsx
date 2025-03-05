@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
@@ -18,18 +18,18 @@ const AddReview = () => {
     const title = from.title.value;
     const published_year = from.published_year.value;
     const review = from.review.value;
-    fetch("http://localhost:5000/reviews", {
+    fetch("http://localhost:5000/review", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
+        title,
+        thumbnail,
+        published_year,
+        genre,
+        rating,
+        review,
         name,
         email,
-        thumbnail,
-        title,
-        review,
-        published_year,
-        rating,
-        genre,
       }),
     })
       .then((res) => res.json())
@@ -123,12 +123,12 @@ const AddReview = () => {
               />
             </div>
             <label className="fieldset-label font-titillium font-bold">
-              Publishing Year
+              Published Year
             </label>
             <input
               type="number"
               className="input input-lg w-full focus:outline-0 focus:border-red-500 focus:border-dashed tracking-wide "
-              placeholder="Y Y Y Y"
+              placeholder="Published Year"
               name="published_year"
               required
             />
