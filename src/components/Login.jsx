@@ -12,7 +12,7 @@ const Login = () => {
   const { signInWithEmail } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const [error, setError] = useState();
+  const [error, setError] = useState(null);
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -27,7 +27,18 @@ const Login = () => {
     emailCheck.isValid &&
       passCheck.isValid &&
       signInWithEmail(email, password)
-        .then(() => {
+        .then((res) => {
+          const userData = {
+            name: res.user.displayName,
+            email: res.user.email,
+            createdAt: res.user.metadata.createdAt,
+            lastLoginAt: res.user.metadata.lastLoginAt,
+          };
+          fetch("http://localhost:5000/user", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(userData),
+          });
           form.reset();
           Swal.fire({
             position: "top-end",
@@ -38,7 +49,7 @@ const Login = () => {
           });
           navigate("/");
         })
-        .catch((err) => setError(err.code));
+        .catch((err) => setError([err.code]));
     emailCheck.isValid || setError(emailCheck.message);
     passCheck.isValid ||
       setError([...emailCheck.message, ...passCheck.message]);
@@ -76,8 +87,10 @@ const Login = () => {
             {error && (
               <div role="alert" className="alert alert-error alert-soft">
                 <ul>
-                  {error.map((err) => (
-                    <li className="list-disc ml-4">{err}</li>
+                  {error.map((err, idx) => (
+                    <li key={idx} className="list-disc ml-4">
+                      {err}
+                    </li>
                   ))}
                 </ul>
               </div>

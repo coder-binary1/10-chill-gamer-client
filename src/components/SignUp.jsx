@@ -13,7 +13,7 @@ const SignUp = () => {
   const { signUpWithEmail, updateUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const [error, setError] = useState();
+  const [error, setError] = useState(null);
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -32,8 +32,19 @@ const SignUp = () => {
       emailCheck.isValid &&
       passCheck.isValid &&
       signUpWithEmail(email, password)
-        .then(() => {
+        .then((res) => {
           updateUser(name, photo).then(() => {
+            const userData = {
+              name: res.user.displayName,
+              email: res.user.email,
+              createdAt: res.user.metadata.createdAt,
+              lastLoginAt: res.user.metadata.lastLoginAt,
+            };
+            fetch("http://localhost:5000/user", {
+              method: "POST",
+              headers: { "content-type": "application/json" },
+              body: JSON.stringify(userData),
+            });
             form.reset();
             Swal.fire({
               position: "top-end",
@@ -46,7 +57,7 @@ const SignUp = () => {
           });
         })
         .catch((err) => {
-          setError(err.code);
+          setError([err.code]);
         });
     nameCheck.isValid || setError(nameCheck.message);
     emailCheck.isValid ||
@@ -109,8 +120,10 @@ const SignUp = () => {
             {error && (
               <div role="alert" className="alert alert-error alert-soft">
                 <ul>
-                  {error.map((err) => (
-                    <li className="list-disc ml-4">{err}</li>
+                  {error.map((err, idx) => (
+                    <li key={idx} className="list-disc ml-4">
+                      {err}
+                    </li>
                   ))}
                 </ul>
               </div>

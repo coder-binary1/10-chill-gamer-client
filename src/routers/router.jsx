@@ -7,6 +7,9 @@ import Login from "../components/Login";
 import SignUp from "../components/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import OnlyPublicRoute from "./OnlyPublicRoute";
+import Profile from "../pages/Profile";
+import AddReview from "../pages/AddReview";
+import GameDetails from "../pages/GameDetails";
 
 const router = createBrowserRouter([
   {
@@ -17,16 +20,26 @@ const router = createBrowserRouter([
       {
         path: "/games",
         element: <ExploreGames></ExploreGames>,
-        loader: () => fetch("gameData.json"),
+        loader: () => fetch("http://localhost:5000/games"),
+      },
+      {
+        path: "/games/:id",
+        element: <GameDetails></GameDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/games/${params.id}`),
       },
       {
         path: "/reviews",
         element: <AllReviews></AllReviews>,
-        loader: () => fetch("reviews.json"),
+        loader: () => fetch("http://localhost:5000/reviews"),
       },
       {
         path: "/addReview",
-        element: <PrivateRoute></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <AddReview></AddReview>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/myReview",
@@ -35,6 +48,14 @@ const router = createBrowserRouter([
       {
         path: "/wishlist",
         element: <PrivateRoute></PrivateRoute>,
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",

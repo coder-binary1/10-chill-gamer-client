@@ -6,7 +6,7 @@ const AllReviews = () => {
 
   return (
     <div className="md:mx-auto flex flex-wrap justify-center gap-6 my-12 mx-5">
-      {reviews.map((review, idx) => (
+      {reviews?.map((review, idx) => (
         <ReviewCard key={idx} review={review}></ReviewCard>
       ))}
     </div>

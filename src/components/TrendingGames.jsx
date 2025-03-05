@@ -5,7 +5,7 @@ const TrendingGames = () => {
   const [games, setGames] = useState();
 
   useEffect(() => {
-    fetch("gameData.json")
+    fetch("http://localhost:5000/games?limit=6&sort=-1")
       .then((res) => res.json())
       .then((data) => setGames(data));
   }, []);
@@ -15,7 +15,7 @@ const TrendingGames = () => {
         Trending Games
       </h2>
       <div className="border-2 w-10 m-auto border-red-500 mt-2 mb-6"></div>
-      <div className="flex flex-wrap justify-center gap-6 mt-4 mx-5">
+      <div className="flex flex-wrap justify-center gap-6 max-w-7xl md:mx-auto mx-5  mt-4">
         {games?.map((game, idx) => (
           <GameCard key={idx} game={game}></GameCard>
         ))}

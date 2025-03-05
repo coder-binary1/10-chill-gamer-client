@@ -57,10 +57,10 @@ const TopBar = () => {
           {isOpen && (
             <ul className="menu dropdown-content bg-base-100 rounded-box z-1 p-2 shadow-sm">
               <li>
-                <button>
+                <Link to="/profile">
                   <CgProfile />
                   Profile
-                </button>
+                </Link>
               </li>
               <li>
                 <button onClick={handleLogOut}>

@@ -9,6 +9,17 @@ const SingInWithGoogle = () => {
 
   const handleGoogleSignIn = () => {
     googleSignIn().then((res) => {
+      const userData = {
+        name: res.user.displayName,
+        email: res.user.email,
+        createdAt: res.user.metadata.createdAt,
+        lastLoginAt: res.user.metadata.lastLoginAt,
+      };
+      fetch("http://localhost:5000/user", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(userData),
+      });
       setUser(res.user);
       Swal.fire({
         position: "top-end",
