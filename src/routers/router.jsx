@@ -10,6 +10,8 @@ import OnlyPublicRoute from "./OnlyPublicRoute";
 import Profile from "../pages/Profile";
 import AddReview from "../pages/AddReview";
 import GameDetails from "../pages/GameDetails";
+import MyReviews from "../pages/MyReviews";
+import WatchList from "../pages/WatchList";
 
 const router = createBrowserRouter([
   {
@@ -43,20 +45,24 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/myReview",
+        path: "/my-review/:email",
         element: (
           <PrivateRoute>
-            <h2>My Review</h2>
+            <MyReviews></MyReviews>
           </PrivateRoute>
         ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/review?email=${params.email}`),
       },
       {
-        path: "/watchlist",
+        path: "/watchlist/:email",
         element: (
           <PrivateRoute>
-            <h2>Watch List</h2>
+            <WatchList></WatchList>
           </PrivateRoute>
         ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/watchlist?email=${params.email}`),
       },
       {
         path: "/profile",

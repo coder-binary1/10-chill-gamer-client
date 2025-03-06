@@ -77,7 +77,7 @@ const Navbar = () => {
 
       <li>
         <NavLink
-          to="/myReview"
+          to={`/my-review/${user?.email}`}
           className={({ isActive }) =>
             isActive
               ? "text-red-500"
@@ -93,7 +93,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/watchlist"
+          to={`/watchlist/${user?.email}`}
           className={({ isActive }) =>
             isActive
               ? "text-red-500"

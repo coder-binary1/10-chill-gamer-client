@@ -8,12 +8,12 @@ const ReviewCardForDetails = ({ review, name, email }) => {
       .then((data) => setUserPhoto(data));
   }, [email]);
   return (
-    <div className="card bg-base-100 border border-gray-100 shadow-xs">
+    <div className="card bg-base-100 border border-gray-100 shadow-xs ">
       <div className="card-body">
         <p className="text-gray-500 italic">“{review}”</p>
         <div className="flex gap-3 mt-1">
           <figure className="w-12 rounded-full">
-            <img src={userPhoto?.photoUrl} alt="Shoes" />
+            <img src={userPhoto?.photoUrl} alt={name} />
           </figure>
           <div>
             <h2 className="text-gray-600 font-bold">{name}</h2>
