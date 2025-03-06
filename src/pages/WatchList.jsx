@@ -4,10 +4,10 @@ const WatchList = () => {
   const watchList = useLoaderData();
 
   return (
-    <div className="max-w-5xl mx-auto my-10 space-y-5 font-poppins">
+    <div className="max-w-3xl lg:max-w-7xl mx-auto my-10 space-y-5 font-poppins">
       <div className="max-w-5xl mx-auto my-10 space-y-5 font-poppins shadow p-2">
         <div className="overflow-x-auto">
-          <table className="table">
+          <table className="table table-xs md:table-md">
             <thead>
               <tr>
                 <th></th>

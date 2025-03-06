@@ -8,7 +8,7 @@ const ReviewCardForDetails = ({ review, name, email }) => {
       .then((data) => setUserPhoto(data));
   }, [email]);
   return (
-    <div className="card bg-base-100 border border-gray-100 shadow-xs ">
+    <div className="card bg-base-100 border border-gray-100 shadow-xs mx-5">
       <div className="card-body">
         <p className="text-gray-500 italic">“{review}”</p>
         <div className="flex gap-3 mt-1">

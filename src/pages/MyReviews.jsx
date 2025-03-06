@@ -56,9 +56,9 @@ const MyReviews = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto my-10 space-y-5 font-poppins shadow p-2">
+    <div className="max-w-3xl lg:max-w-5xl mx-auto my-10 space-y-5 font-poppins shadow p-2">
       <div className="overflow-x-auto">
-        <table className="table">
+        <table className="table table-xs md:table-md">
           <thead>
             <tr>
               <th></th>
@@ -80,13 +80,13 @@ const MyReviews = () => {
                 <td className="space-y-2 text-2xl ">
                   <button
                     onClick={() => handleEdit(review)}
-                    className="btn btn-lg"
+                    className="btn btn-sm md:btn-lg "
                   >
                     <FaEdit />
                   </button>
                   <button
                     onClick={() => handleDelete(review._id)}
-                    className="btn btn-lg btn-error text-white"
+                    className="btn btn-sm md:btn-lg btn-error text-white"
                   >
                     <FaDeleteLeft />
                   </button>

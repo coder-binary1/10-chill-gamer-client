@@ -60,12 +60,12 @@ const GameDetails = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto my-10 font-poppins">
+    <div className="max-w-4xl mx-auto mb-5 md:my-10 font-poppins">
       <div className="card lg:card-side  bg-base-100 shadow-sm">
-        <figure className="md:w-1/2">
+        <figure className="lg:w-1/2">
           <img src={thumbnail} alt="Movie" />
         </figure>
-        <div className="card-body md:w-1/2 space-y-2">
+        <div className="card-body lg:w-1/2 md:items-center lg:items-start space-y-2">
           <div className="space-x-2">
             <p className="badge badge-soft badge-error">{genre}</p>
           </div>
@@ -100,7 +100,7 @@ const GameDetails = () => {
         </div>
       </div>
       <div>
-        <h2 className="text-2xl mt-10">Reviews</h2>
+        <h2 className="text-2xl mt-10 mx-5">Reviews</h2>
         <div className="space-y-4 mt-3">
           <ReviewCardSingleColumn
             review={review}
