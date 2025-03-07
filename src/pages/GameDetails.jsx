@@ -24,7 +24,9 @@ const GameDetails = () => {
     if (!user) {
       return;
     }
-    fetch(`http://localhost:5000/watchList?email=${user?.email}`)
+    fetch(
+      `https://10-chill-gamer-server.vercel.app/watchList?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         const matched = data.find((id) => id._id === _id);
@@ -38,7 +40,7 @@ const GameDetails = () => {
 
   const handleAddWatchList = (id) => {
     user &&
-      fetch(`http://localhost:5000/watchList/${id}`, {
+      fetch(`https://10-chill-gamer-server.vercel.app/watchList/${id}`, {
         method: "PUT",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ email: user.email }),

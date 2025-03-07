@@ -5,7 +5,7 @@ const TrendingGames = () => {
   const [games, setGames] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5000/games?limit=6&sort=-1")
+    fetch("https://10-chill-gamer-server.vercel.app/games?limit=6&sort=-1")
       .then((res) => res.json())
       .then((data) => setGames(data));
   }, []);

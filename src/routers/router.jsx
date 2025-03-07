@@ -24,19 +24,19 @@ const router = createBrowserRouter([
       {
         path: "/games",
         element: <ExploreGames></ExploreGames>,
-        loader: () => fetch("http://localhost:5000/games"),
+        loader: () => fetch("https://10-chill-gamer-server.vercel.app/games"),
       },
 
       {
         path: "/reviews",
         element: <AllReviews></AllReviews>,
-        // loader: () => fetch("http://localhost:5000/review"),
+        // loader: () => fetch("https://10-chill-gamer-server.vercel.app/review"),
       },
       {
         path: "/review/:id",
         element: <GameDetails></GameDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/review/${params.id}`),
+          fetch(`https://10-chill-gamer-server.vercel.app/review/${params.id}`),
       },
       {
         path: "/addReview",
@@ -54,7 +54,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/review?email=${params.email}`),
+          fetch(
+            `https://10-chill-gamer-server.vercel.app/review?email=${params.email}`
+          ),
       },
       {
         path: "/watchlist/:email",
@@ -64,7 +66,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/watchlist?email=${params.email}`),
+          fetch(
+            `https://10-chill-gamer-server.vercel.app/watchlist?email=${params.email}`
+          ),
       },
       {
         path: "/profile",

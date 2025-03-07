@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const ReviewCardForDetails = ({ review, name, email }) => {
   const [userPhoto, setUserPhoto] = useState();
   useEffect(() => {
-    fetch(`http://localhost:5000/user?email=${email}`)
+    fetch(`https://10-chill-gamer-server.vercel.app/user?email=${email}`)
       .then((res) => res.json())
       .then((data) => setUserPhoto(data));
   }, [email]);

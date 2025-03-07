@@ -26,7 +26,7 @@ const EditModal = ({ selectedReview, updateReview }) => {
     const published_year = form.published_year.value;
     const review = form.review.value;
 
-    fetch(`http://localhost:5000/review/${_id}`, {
+    fetch(`https://10-chill-gamer-server.vercel.app/review/${_id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -66,8 +66,7 @@ const EditModal = ({ selectedReview, updateReview }) => {
             timer: 1500,
           });
         }
-      })
-      .catch((err) => console.log(err));
+      });
   };
 
   useEffect(() => {

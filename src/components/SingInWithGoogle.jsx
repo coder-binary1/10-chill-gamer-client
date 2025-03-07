@@ -16,7 +16,7 @@ const SingInWithGoogle = () => {
         createdAt: res.user.metadata.createdAt,
         lastLoginAt: res.user.metadata.lastLoginAt,
       };
-      fetch("http://localhost:5000/user", {
+      fetch("https://10-chill-gamer-server.vercel.app/user", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(userData),

@@ -6,7 +6,7 @@ const ReviewCard = ({ review }) => {
   const [userPhoto, setUserPhoto] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user?email=${review.email}`)
+    fetch(`https://10-chill-gamer-server.vercel.app/user?email=${review.email}`)
       .then((res) => res.json())
       .then((data) => setUserPhoto(data));
   }, [review]);

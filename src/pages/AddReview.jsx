@@ -18,7 +18,7 @@ const AddReview = () => {
     const title = from.title.value;
     const published_year = from.published_year.value;
     const review = from.review.value;
-    fetch("http://localhost:5000/review", {
+    fetch("https://10-chill-gamer-server.vercel.app/review", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
