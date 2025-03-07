@@ -1,5 +1,5 @@
 import ReactStars from "react-rating-stars-component";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import ReviewCardSingleColumn from "../components/ReviewCardSingleColumn";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 
 const GameDetails = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const {
     _id,
@@ -39,6 +40,7 @@ const GameDetails = () => {
   }, [user, _id]);
 
   const handleAddWatchList = (id) => {
+    user || navigate("/login");
     user &&
       fetch(`https://10-chill-gamer-server.vercel.app/watchList/${id}`, {
         method: "PUT",
