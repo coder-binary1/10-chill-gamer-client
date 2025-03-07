@@ -1,6 +1,6 @@
 import { FaFacebookF, FaTwitter, FaTwitch } from "react-icons/fa";
 import { SlLogout } from "react-icons/sl";
-import { CgProfile, CgAdd } from "react-icons/cg";
+import { CgProfile } from "react-icons/cg";
 import { Tooltip } from "react-tooltip";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useRef, useState } from "react";
@@ -55,7 +55,7 @@ const TopBar = () => {
             <Tooltip id="my-tooltip" />
           </button>
           {isOpen && (
-            <ul className="menu dropdown-content bg-base-100 rounded-box z-1 p- shadow-sm border border-red-100 right-0 w-36">
+            <ul className="menu dropdown-content bg-base-100 rounded-box z-1 shadow-sm border border-red-100 right-0 w-36">
               <li>
                 <Link to="/profile">
                   <CgProfile />

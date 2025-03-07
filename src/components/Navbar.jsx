@@ -1,13 +1,29 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import TopBar from "./TopBar";
-import { useContext } from "react";
+import { useContext, useRef, useState } from "react";
 import { ThemeContext } from "../Providers/ThemeProvider";
 import { AuthContext } from "../Providers/AuthProvider";
+import { AiOutlineLogin } from "react-icons/ai";
+import { CgProfile } from "react-icons/cg";
+import { SlLogout } from "react-icons/sl";
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, LogOut } = useContext(AuthContext);
   const { theme } = useContext(ThemeContext);
   const location = useLocation().pathname;
+
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const navigate = useNavigate();
+
+  const toggleDropdown = () => {
+    setIsOpen((prevState) => !prevState);
+  };
+
+  const handleLogOut = () => {
+    LogOut();
+    navigate("/");
+  };
 
   const links = (
     <>
@@ -154,6 +170,45 @@ const Navbar = () => {
             <span className="text-red-500">Gamer</span>
           </Link>
         </div>
+
+        <div
+          className="dropdown navbar-end inline-flex mr-5 lg:hidden"
+          ref={dropdownRef}
+        >
+          {!user ? (
+            <Link to="/login" className="btn btn-sm border-0">
+              Login
+            </Link>
+          ) : (
+            <button
+              className="btn p-0 border-0 bg-transparent shadow-none hover:shadow-none"
+              onClick={toggleDropdown}
+            >
+              <img
+                className="w-8 rounded-full relative"
+                src={user?.photoURL}
+                alt={user?.displayName}
+              />
+            </button>
+          )}
+
+          {isOpen && user && (
+            <ul className="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-36 p-2 shadow font-poppins bg-base-100 border top-6">
+              <li>
+                <Link to="/profile">
+                  <CgProfile />
+                  Profile
+                </Link>
+              </li>
+              <li>
+                <button onClick={handleLogOut}>
+                  <SlLogout /> Logout
+                </button>
+              </li>
+            </ul>
+          )}
+        </div>
+
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-poppins font-medium ">
             {links}

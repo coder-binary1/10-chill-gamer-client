@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { ThemeContext } from "../Providers/ThemeProvider";
+
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const handleTheme = () => {
     theme === "light" && setTheme("dark");
     theme === "dark" && setTheme("light");
   };
-
   return (
     <div className="flex">
       <button

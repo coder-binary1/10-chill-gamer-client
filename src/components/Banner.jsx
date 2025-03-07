@@ -72,6 +72,11 @@ const Banner = () => {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
+        style={{
+          "--swiper-pagination-color": "#fff",
+          "--swiper-navigation-color": "#000",
+          "--swiper-navigation-size": "25px",
+        }}
       >
         {slides.map((slide, idx) => (
           <SwiperSlide
@@ -101,7 +106,7 @@ const Banner = () => {
               </p>
               <Link
                 to="/games"
-                className="btn btn-lg bg-red-500 border-0 text-white font-poppins mt-8 z-10"
+                className="btn  lg:btn-lg bg-red-500 border-0 text-white font-poppins mt-8 z-10"
               >
                 Explore All
               </Link>
