@@ -37,26 +37,29 @@ const GameDetails = () => {
   }, [user, _id]);
 
   const handleAddWatchList = (id) => {
-    fetch(`http://localhost:5000/watchList/${id}`, {
-      method: "PUT",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ email: user.email }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.modifiedCount > 0 || data.upsertedId) {
-          Swal.fire({
-            title: "Successfully add to watch list",
-            position: "top-end",
-            icon: "success",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-          document.getElementById(`btn-${_id}`).setAttribute("disabled", true);
-          document.getElementById(`btn-${_id}`).innerText =
-            "Already in your watchlist!";
-        }
-      });
+    user &&
+      fetch(`http://localhost:5000/watchList/${id}`, {
+        method: "PUT",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email: user.email }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.modifiedCount > 0 || data.upsertedId) {
+            Swal.fire({
+              title: "Successfully add to watch list",
+              position: "top-end",
+              icon: "success",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            document
+              .getElementById(`btn-${_id}`)
+              .setAttribute("disabled", true);
+            document.getElementById(`btn-${_id}`).innerText =
+              "Already in your watchlist!";
+          }
+        });
   };
 
   return (

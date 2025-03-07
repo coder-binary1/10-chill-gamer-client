@@ -56,46 +56,50 @@ const MyReviews = () => {
   };
 
   return (
-    <div className="max-w-3xl lg:max-w-5xl mx-auto my-10 space-y-5 font-poppins shadow p-2">
-      <div className="overflow-x-auto">
-        <table className="table table-xs md:table-md">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Game Title</th>
-              <th>Genre</th>
-              <th>Published</th>
-              <th>Review</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {myReviews?.map((review, idx) => (
-              <tr key={review._id}>
-                <th>{idx + 1}</th>
-                <td>{review.title}</td>
-                <td>{review.genre}</td>
-                <td>{review.published_year}</td>
-                <td>{review.review}</td>
-                <td className="space-y-2 text-2xl ">
-                  <button
-                    onClick={() => handleEdit(review)}
-                    className="btn btn-sm md:btn-lg "
-                  >
-                    <FaEdit />
-                  </button>
-                  <button
-                    onClick={() => handleDelete(review._id)}
-                    className="btn btn-sm md:btn-lg btn-error text-white"
-                  >
-                    <FaDeleteLeft />
-                  </button>
-                </td>
+    <div className="max-w-3xl lg:max-w-5xl mx-5 md:mx-auto  my-10 space-y-5 font-poppins shadow p-2">
+      {!myReviews.length ? (
+        <h2 className="text-center">No Data Found</h2>
+      ) : (
+        <div className="overflow-x-auto">
+          <table className="table table-xs md:table-md">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Game Title</th>
+                <th>Genre</th>
+                <th>Published</th>
+                <th>Review</th>
+                <th>Action</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {myReviews?.map((review, idx) => (
+                <tr key={review._id}>
+                  <th>{idx + 1}</th>
+                  <td>{review.title}</td>
+                  <td>{review.genre}</td>
+                  <td>{review.published_year}</td>
+                  <td>{review.review}</td>
+                  <td className="space-y-2 text-2xl ">
+                    <button
+                      onClick={() => handleEdit(review)}
+                      className="btn btn-sm md:btn-lg "
+                    >
+                      <FaEdit />
+                    </button>
+                    <button
+                      onClick={() => handleDelete(review._id)}
+                      className="btn btn-sm md:btn-lg btn-error text-white"
+                    >
+                      <FaDeleteLeft />
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
       <EditModal
         selectedReview={selectedReview}
         updateReview={handleUpdateReviewOnUi}

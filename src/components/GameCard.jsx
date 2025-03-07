@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const GameCard = ({ game }) => {
-  const { _id, title, description, thumbnail, genres, published_year } = game;
+  const { _id, title, description, thumbnail, genre, published_year } = game;
 
   return (
     <div className="card bg-base-50 image-full w-96 shadow-sm group font-poppins">
@@ -16,8 +16,7 @@ const GameCard = ({ game }) => {
       <div className="card-body text-left">
         <div className="space-x-1">
           <p className="grow-0 font-medium font-poppins uppercase badge badge-soft badge-error badge-sm">
-            {" "}
-            {genres}
+            {genre}
           </p>
         </div>
         <h2 className="card-title font-titillium text-2xl">{title}</h2>

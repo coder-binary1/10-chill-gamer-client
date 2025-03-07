@@ -18,17 +18,17 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   const signUpWithEmail = (email, password) => {
-    setLoading(false);
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const signInWithEmail = (email, password) => {
-    setLoading(false);
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const updateUser = (name, photo) => {
-    setLoading(false);
+    setLoading(true);
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: photo,
@@ -36,7 +36,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const googleSignIn = () => {
-    setLoading(false);
+    setLoading(true);
     return signInWithPopup(auth, provider);
   };
 
