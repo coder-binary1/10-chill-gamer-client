@@ -86,26 +86,32 @@
 
 ---
 
+## Misc
+
+- Lottie React for animations
+- React-tooltip for tooltips
+- Dark/Light Theme toggle functionality
+
 ## Technologies Used
 
 - **Frontend**:
-  ![Logo](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg)
-  ![Logo](https://cdn.simpleicons.org/react/61DAFB)
-  ![Logo](https://reactrouter.com/_brand/React%20Router%20Brand%20Assets/React%20Router%20Lockup/Light.svg)
-  ![Logo](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg)
-  ![Logo](https://cdn.simpleicons.org/tailwindcss/06B6D4)
 
-  - **Backend**:
-    ![Logo](https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg)
-    ![Logo](https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg)
-    ![Logo](https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg)
-    ![Logo](https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg)
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+  <img src="https://cdn.simpleicons.org/react/61DAFB" height="40" alt="react logo"  />
+  <img src="https://reactrouter.com/_brand/React%20Router%20Brand%20Assets/React%20Router%20Lockup/Light.svg" height="40" alt="react-router logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+  <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" height="40" alt="tailwindcss logo"  />
+</div>
 
-  - React Router for navigation
-
-  - Lottie React for animations
-  - React-tooltip for tooltips
-  - Dark/Light Theme toggle functionality
+- **Backend**:
+  <div align="left">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" height="40" alt="nodejs"  />
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" height="40" alt="express"  />
+    <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" height="40" alt="firebase"  />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" height="40" alt="mongoDB"  />
+  </div>
 
 ---
 
