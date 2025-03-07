@@ -120,9 +120,9 @@
     height="40"
     alt="tailwindcss logo"
   />
-  <img height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs"
+  <img height="48" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs"
   />
-  <img height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express"
+  <img height="48" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express"
   />
   <img height="40" src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase"/>
   <img height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongoDB" />
@@ -130,14 +130,6 @@
 
 ---
 
-**Live Link**
+### Live Link
 
-## Setup & Installation
-
-1. **Clone the repository**:
-
-   ```bash
-   https://github.com/coder-binary1/10-chill-gamer-client.git
-   cd 10-chill-gamer-client
-   npm install
-   ```
+Chill Gamer - [Live Site](https://chill-gamer-64b22.web.app/)
